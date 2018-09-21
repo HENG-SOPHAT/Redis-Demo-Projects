@@ -3,24 +3,33 @@
 
 # 1. What's NoSql database?
 
-# 2. NoSql Database Type and When to use:
+https://en.wikipedia.org/wiki/NoSQL
+
+# 2. NoSql Types:
+
 ```
-+ Key/Value Based/Store:
-	- Definition:
-	- Vendor: Redis, MemcacheDB, etc.
-	- When To Use:
-+ Column Based/Stored:
-	- Definition	:
-	- Vendor		: Cassandra, HBase, etc.
-	- When To Use	:
-+ Document Based/Stored:
-	- Definition	:
-	- Vendor		: MongoDB, Couchbase, etc
-	- When To Use	:
-+ Graph Based/Stored:
-	- Definition	:
-	- Vendor		: OrientDB, Neo4J, etc.
-	- When To Use	:
+* Key/Value Based/Store: 
+	-> Vendors: Redis, MemcacheDB, etc.
+	-> When to use:
+		- Caching
+		- Queue-ing
+		- Distributing information /  tasks
+		- Session Store
+		
+* Column Based/Stored: 
+	-> Vendors: Cassandra, HBase, etc.
+	-> When to use:
+		- Keeping unstructure information.
+		- Scaling
+* Document Based/Stored: 
+	-> Vendors: MongoDB, Couchbase, CouchDB etc.
+	-> When to use:
+		- Nested information
+		- JavaScript friendly
+* Graph Based/Stored: 
+	-> Vendors: OrientDB, Neo4J, etc.
+	-> When to use:?
+
 ```
 
 # 3. Redis NoSql
