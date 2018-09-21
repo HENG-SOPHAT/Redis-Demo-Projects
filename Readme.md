@@ -156,7 +156,6 @@
 		- ZSCORE:
 			
 	+ Examples:
-
 		> zadd heightscores 120 "joe" 100 "bob" 150 "mary" 90 "tom"
 		> zrange heightscores 0 4
 		> zrange heightscores 0 4 WITHSCORES 
@@ -164,73 +163,77 @@
 		> zrank heightscores bob
 		> zrank heightscores tom
 		> zscore mary
-		
-        ``` 
-
+	``` 
 ## 3.2. Redis Pub and Sub: 
- Redis can be used as a message bus.
+
+** Redis can be used as a message bus.
+
 ** References: 
-	https://redis.io/topics/pubsub
-		
-	** Using Pub and Sub **
-	- Terminal 1:
-	> subscriber geetings 
+https://redis.io/topics/pubsub
+
+** Commands and Examples:
+```
+** Using Pub and Sub **
+- Terminal 1:
+> subscriber geetings 
 	
-	- Terminal 2:
-	> publish greetings "hello redis"
-	> publish greet "hello"
+- Terminal 2:
+> publish greetings "hello redis"
+> publish greet "hello"
 	
-	- Terminal 3: 
-	> subscriber errors
+- Terminal 3: 
+> subscriber errors
 	
-	- Terminal 2:
-	> publish greetings "h1"
-	> publish errors "oops"
+- Terminal 2:
+> publish greetings "h1"
+> publish errors "oops"
 	
-	- Terminal 4: subscrib with pattern
-	> publish greet*
-	
-	- Terminal 2:
-	> publish greetings "h1"
-	> publish greet "h1"
+- Terminal 4: subscribe with pattern
+> publish greet*
+
+- Terminal 2:
+> publish greetings "h1"
+> publish greet "h1"
+```
 
 ## 3.3. Redis Transactions:
 
-Redis has limited support for transactions.
-	 ** References: 
-		https://redis.io/topics/transactions
-	 ** Using Transactions:
-	-> Terminal 1:
-	> multi 
+** Redis has limited support for transactions.
+** References: https://redis.io/topics/transactions
+** Using Transactions:
+** Commands and Examples:
+```
+-> Terminal 1:
+> multi 
+
+-> Terminal 2:
+> set account-a 100
+> set account-b 200
+
+-> Terminal 1:
+> incrby account-a -50
+> incrby account-b 50
+
+-> Terminal 2:
+> get account-a
+> incrby account-a 300
+
+-> Terminal 1:
+> exec 
 	
-	-> Terminal 2:
-	> set account-a 100
-	> set account-b 200
-	
-	-> Terminal 1:
-	> incrby account-a -50
-	> incrby account-b 50
-	
-	-> Terminal 2:
-	> get account-a
-	> incrby account-a 300
-	
-	-> Terminal 1:
-	> exec 
-	
-	-> Terminal 2:
-	> set account-a 0
-	
-	-> Terminal 1:
-	> watch account-a
-	> multi
-	> incrby account-a -50
-	> incrby account-b +50
-	
-	-> Terminal 2:
-	> set account-a 25
-	
-	-> Terminal 1:
-	> exec
-  
+-> Terminal 2:
+> set account-a 0
+
+-> Terminal 1:
+> watch account-a
+> multi
+> incrby account-a -50
+> incrby account-b +50
+
+-> Terminal 2:
+> set account-a 25
+
+-> Terminal 1:
+> exec
+```
 ## 3.4. Redis Client Demo with C# Console Application
