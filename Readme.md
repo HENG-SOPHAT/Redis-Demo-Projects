@@ -228,8 +228,11 @@ https://redis.io/topics/pubsub
 ## 3.3. Redis Transactions:
 
 ** Redis has limited support for transactions.
+
 ** References: https://redis.io/topics/transactions
+
 ** Using Transactions:
+
 ** Commands and Examples:
 ```
 	-> Terminal 1:
@@ -266,12 +269,15 @@ https://redis.io/topics/pubsub
 	> exec
 ```
 ## 3.4. Redis Client Demo with C# Console Application
+
 ** Redis Clients: https://redis.io/clients
+
 ** Redis clients with C#: https://github.com/ServiceStack/ServiceStack.Redis
 	-> ICacheClient: Inteface allow to caching data with redis
 	-> IRedisNativeClient: Inteface allow to call a low-level redis commands
 	-> IRedisClient: High-Level abstraction layer
 	-> IRedisTypedClient: 
+
 ** Demo C# Console application:
 	-> VS 2017
 	-> .Net 4.5.2 or later
