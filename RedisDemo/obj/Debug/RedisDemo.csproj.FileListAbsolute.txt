@@ -1,0 +1,16 @@
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\RedisDemo.exe.config
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\RedisDemo.exe
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\RedisDemo.pdb
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Common.dll
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Redis.dll
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Text.dll
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Common.xml
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Redis.xml
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Text.xml
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\obj\Debug\RedisDemo.csprojAssemblyReference.cache
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\obj\Debug\RedisDemo.csproj.CoreCompileInputs.cache
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\obj\Debug\RedisDemo.csproj.CopyComplete
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\obj\Debug\RedisDemo.exe
+C:\Users\sophat.heng.ASIACELL\Source\Repos\RedisDemo\RedisDemo\obj\Debug\RedisDemo.pdb
