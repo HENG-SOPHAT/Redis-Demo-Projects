@@ -100,7 +100,7 @@
 	> lrange 0 5 
 	
   	```
- 	- SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
+  - SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
   	```
 	+ Commands: 
 		- SADD:
@@ -121,7 +121,7 @@
 	> smembers post:1:likes "bob"
 	
 	```
-	- Hashes: hashes are maps between string fields and string values
+ - Hashes: hashes are maps between string fields and string values
 	```
 	+ Commands: 
 		- HSET: 
@@ -143,8 +143,7 @@
 		> hkeys user:1:h
 		> hvals user:1:h
 	```		
-  	- Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
-	
+  - Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
 	```		
 	+ Commands: 
 		- ZADD:
@@ -165,7 +164,8 @@
 		> zrank heightscores bob
 		> zrank heightscores tom
 		> zscore mary
-        ```
+		
+        ``` 
 
 ## 3.2. Redis Pub and Sub: 
  Redis can be used as a message bus.
