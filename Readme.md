@@ -68,11 +68,13 @@
 	> mset order:1 "order 1 data" order:2 "order 2 data"
 	> mget order:1 order:2
 	> strlen order:1
-  ```
- - List Data Type: Store the list of strings type.
-  ```
-  - Commands: LPUSH, RPUSH, LREM, LSET, LINDEX, LRANGE, LLEN, LPOP, RPOP AND LTRIM
-  - Examples: 		
+  	
+	```
+  - List Data Type: Store the list of strings type.
+  	```
+	- Commands: LPUSH, RPUSH, LREM, LSET, LINDEX, LRANGE, LLEN, LPOP, RPOP AND LTRIM
+	- Examples: 	
+	
 	** LPUSH AND RPUSH **
 	> LPUSH COMMENTS "Comment 1"
 	> lrange 0 1
@@ -96,68 +98,75 @@
 	> lrange 0 5
 	> lpop connents 
 	> lrange 0 5 
-  ```
- 3. SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
-  ```
-Commands: 
-				- SADD:
-				- SCARD: 
-				- SDIFF SINTER AND SUNION:
-				- SISMEMBER:
-				- SMEMBERS:
-				- SMOVE:
-				- SREM:
-			** Adding to sets **
-				> sadd post:1:likes "bob" "joe" "mary"
-				> scard post:1:likes
-				> smembers post:1:likes
-				> sadd post:2:likes "bob" "tom"
-				> sdiff post:1:likes post:2:likes
-				> sinter post:1:likes post:2:likes
-				> smembers post:1:likes "bob"
-		4: Hashes: hashes are maps between string fields and string values
-			Commands: 
-				- HSET: 
-				- HMSET: 
-				- HGET: 
-				- HMGET:
-				- HGETALL:
-				- HDEL:
-				- HEXISTS:
-				- HINCRBY:
-				- HKEYS:
-				- HVALS:
-			Examples:
-				> hset user:1:h name "joe"
-				> hget user:1:h name 
-				> hmset user:1:h email "joe@test1.com" id 1
-				> hmset user:1:h name email id
-				> hmgetall user:1:h
-				> hkeys user:1:h
-				> hvals user:1:h
+	
+  	```
+ 	- SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
+  	```
+	+ Commands: 
+		- SADD:
+		- SCARD: 
+		- SDIFF SINTER AND SUNION:
+		- SISMEMBER:
+		- SMEMBERS:
+		- SMOVE:
+		- SREM:
+	+ Examples:
+	** Adding to sets **
+	> sadd post:1:likes "bob" "joe" "mary"
+	> scard post:1:likes
+	> smembers post:1:likes
+	> sadd post:2:likes "bob" "tom"
+	> sdiff post:1:likes post:2:likes
+	> sinter post:1:likes post:2:likes
+	> smembers post:1:likes "bob"
+	
+	```
+	- Hashes: hashes are maps between string fields and string values
+	```
+	+ Commands: 
+		- HSET: 
+		- HMSET: 
+		- HGET: 
+		- HMGET:
+		- HGETALL:
+		- HDEL:
+		- HEXISTS:
+		- HINCRBY:
+		- HKEYS:
+		- HVALS:
+	+ Examples:
+		> hset user:1:h name "joe"
+		> hget user:1:h name 
+		> hmset user:1:h email "joe@test1.com" id 1
+		> hmset user:1:h name email id
+		> hmgetall user:1:h
+		> hkeys user:1:h
+		> hvals user:1:h
 	```		
-  - Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
+  	- Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
+	
+	```		
+	+ Commands: 
+		- ZADD:
+		- ZCARD:
+		- ZCOUNT:
+		- ZINCRBY:
+		- ZRANGE:
+		- ZRANK: get index of field or item.
+		- ZREM:
+		- ZSCORE:
 			
-			Commands: 
-				- ZADD:
-				- ZCARD:
-				- ZCOUNT:
-				- ZINCRBY:
-				- ZRANGE:
-				- ZRANK: get index of field or item.
-				- ZREM:
-				- ZSCORE:
-			
-			Examples:
-			
-				> zadd heightscores 120 "joe" 100 "bob" 150 "mary" 90 "tom"
-				> zrange heightscores 0 4
-				> zrange heightscores 0 4 WITHSCORES 
-				> zadd heightscores 155 "joe"
-				> zrank heightscores bob
-				> zrank heightscores tom
-				> zscore mary
-        
+	+ Examples:
+
+		> zadd heightscores 120 "joe" 100 "bob" 150 "mary" 90 "tom"
+		> zrange heightscores 0 4
+		> zrange heightscores 0 4 WITHSCORES 
+		> zadd heightscores 155 "joe"
+		> zrank heightscores bob
+		> zrank heightscores tom
+		> zscore mary
+        ```
+
 ## 3.2. Redis Pub and Sub: 
  Redis can be used as a message bus.
 ** References: 
