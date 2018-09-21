@@ -32,9 +32,8 @@
     https://redis.io/topics/data-types-intro
     https://redis.io/topics/data-types
     
-  - Strings Data Type: 
+  - Strings Data Type: Types: String, Images, Serialize Objects( XML, JSON), Others ...
   	```
-	-> Types: String, Images, Serialize Objects( XML, JSON), Others ...
 	-> Commands: SET, GET,  APPEND, INCR AND DECR, GETRANGE, MGET, MSET, STRLEN
 	-> Examples: 
 	
