@@ -32,41 +32,49 @@
     https://redis.io/topics/data-types-intro
     https://redis.io/topics/data-types
     
-  - Strings Data Type: Types: String, Images, Serialize Objects( XML, JSON), Others ...
+  - Strings Data Type: String, Images, Serialize Objects( XML, JSON), Others ...
   	```
-	-> Commands: SET, GET,  APPEND, INCR AND DECR, GETRANGE, MGET, MSET, STRLEN
-	-> Examples: 
-	
-	** Basic Get and Set **
-	> SET USER "name: Test1"
-	> GET USER
-	> DEL USER
-				
-	** SET With Expiration **
-	> SET USER "name: Test1" EX 5 
-	> GET USER
-	> DEL USER 
-				
-	** Set Json data
-	> SET USER:1 "{'name': 'user1', 'email': 'user1@email.com'}"
-	> GET USER:1
-				
-	** Incrementing: INCR AND DECR
-	> SET USER:ID 1
-	> GET USER:ID
-	> INCR USER:ID
-	> GET USER:ID
-	> APPEND USER:1 "extra data"
-	> GET USER:1
+	-> Commands: 
+		- SET: Set value with a key.
+		- GET: Get value by a key.
+		- APPEND: append string value.
+		- INCR AND DECR: increment or decrement key's value.
+		- GETRANGE: Get substring
+		- MGET: Get multiple keys and values 
+		- MSET: Set multiple keys and values 
+		- STRLEN: Length of strings
 		
-	** GETRANGE 
-	> SET customer:1 "abcde000123"
-	> getrange customer:1 5 9
+	-> Examples: 
+		** GET and SET **
+		> SET USER "name: Test1"
+		> GET USER
+		> DEL USER
 				
-	** MSET , MGET AND STRLEN:
-	> mset order:1 "order 1 data" order:2 "order 2 data"
-	> mget order:1 order:2
-	> strlen order:1
+		** SET With Expiration **
+		> SET USER "name: Test1" EX 5 
+		> GET USER
+		> DEL USER 
+				
+		** SET With Json data **
+		> SET USER:1 "{'name': 'user1', 'email': 'user1@email.com'}"
+		> GET USER:1
+				
+		** Incrementing: INCR AND DECR **
+		> SET USER:ID 1
+		> GET USER:ID
+		> INCR USER:ID
+		> GET USER:ID
+		> APPEND USER:1 "extra data"
+		> GET USER:1
+		
+		** GETRANGE: **
+		> SET customer:1 "abcde000123"
+		> getrange customer:1 5 9
+				
+		** MSET , MGET AND STRLEN: **
+		> mset order:1 "order 1 data" order:2 "order 2 data"
+		> mget order:1 order:2
+		> strlen order:1
   	
 	```
   - List Data Type: Store the list of strings type.
