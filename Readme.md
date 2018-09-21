@@ -33,41 +33,41 @@
     https://redis.io/topics/data-types
   - Strings Data Type: 
   
-  ```
-  -> Types: String, Images, Serialize Objects( XML, JSON), Others ...
+  	```
+	-> Types: String, Images, Serialize Objects( XML, JSON), Others ...
 	-> Commands: SET, GET,  APPEND, INCR AND DECR, GETRANGE, MGET, MSET, STRLEN
 	-> Examples: 
-	** Basic get and set **
+	
+	** Basic Get and Set **
 	> SET USER "name: Test1"
 	> GET USER
 	> DEL USER
 				
-				** SET With Expiration 
-				> SET USER "name: Test1" EX 5 
-				> GET USER
-				> DEL USER 
+	** SET With Expiration **
+	> SET USER "name: Test1" EX 5 
+	> GET USER
+	> DEL USER 
 				
-				** Set Json 
-				> SET USER:1 "{'name': 'user1', 'email': 'user1@email.com'}"
-				> GET USER:1
+	** Set Json data
+	> SET USER:1 "{'name': 'user1', 'email': 'user1@email.com'}"
+	> GET USER:1
 				
-				** Incrementing: INCR AND DECR
-				> SET USER:ID 1
-				> GET USER:ID
-				> INCR USER:ID
-				> GET USER:ID
-				> APPEND USER:1 "extra data"
-				> GET USER:1
+	** Incrementing: INCR AND DECR
+	> SET USER:ID 1
+	> GET USER:ID
+	> INCR USER:ID
+	> GET USER:ID
+	> APPEND USER:1 "extra data"
+	> GET USER:1
+		
+	** GETRANGE 
+	> SET customer:1 "abcde000123"
+	> getrange customer:1 5 9
 				
-				** GETRANGE 
-				> SET customer:1 "abcde000123"
-				> getrange customer:1 5 9
-				
-				** MSET , MGET AND STRLEN:
-				> mset order:1 "order 1 data" order:2 "order 2 data"
-				> mget order:1 order:2
-				> strlen order:1
-        
+	** MSET , MGET AND STRLEN:
+	> mset order:1 "order 1 data" order:2 "order 2 data"
+	> mget order:1 order:2
+	> strlen order:1
   ```
   2. List:
 				- Store the list of strings type:
