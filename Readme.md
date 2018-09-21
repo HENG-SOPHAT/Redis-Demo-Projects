@@ -79,37 +79,48 @@
 	```
   - List Data Type: Store the list of strings type.
   	```
-	- Commands: LPUSH, RPUSH, LREM, LSET, LINDEX, LRANGE, LLEN, LPOP, RPOP AND LTRIM
-	- Examples: 	
+	-> Commands: 
+		- LPUSH: 
+		- RPUSH: 
+		- LREM: 
+		- LSET: 
+		- LINDEX: 
+		- LRANGE: 
+		- LLEN: 
+		- LPOP: 
+		- RPOP:
+		- LTRIM:
+		
+	-> Examples: 	
 	
-	** LPUSH AND RPUSH **
-	> LPUSH COMMENTS "Comment 1"
-	> lrange 0 1
-	> LPUSH COMMENTS "Comment 2"
-	> lrange 0 2
-	> RPUSH COMMENTS "Comment 3"
-	> lrange 0 3
-	> RPUSH COMMENTS "Comment 4"
-	> RPUSH COMMENTS "Comment 5"
-	> lrange 0 5
+		** Adding to list: LPUSH AND RPUSH **
+		> LPUSH COMMENTS "Comment 1"
+		> lrange 0 1
+		> LPUSH COMMENTS "Comment 2"
+		> lrange 0 2
+		> RPUSH COMMENTS "Comment 3"
+		> lrange 0 3
+		> RPUSH COMMENTS "Comment 4"
+		> RPUSH COMMENTS "Comment 5"
+		> lrange 0 5
 				
-	** LTRIM: Trimming list item
-	> RPUSH COMMENTS "Comment 6"
-	> lrange 0 6
-	> ltrim connents 0 5
-	> lrange 0 5
+		** LTRIM: Trimming list item **
+		> RPUSH COMMENTS "Comment 6"
+		> lrange 0 6
+		> ltrim connents 0 5
+		> lrange 0 5
 
-	** Others commands: lindex, lpop and rpop
-	> lindex connents 2
-	> lpop connents 
-	> lrange 0 5
-	> lpop connents 
-	> lrange 0 5 
+		** Others commands: lindex, lpop and rpop **
+		> lindex connents 2
+		> lpop connents 
+		> lrange 0 5
+		> lpop connents 
+		> lrange 0 5 
 	
   	```
-   - SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
+   - SETS Data Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
   	```
-	+ Commands: 
+	-> Commands: 
 		- SADD:
 		- SCARD: 
 		- SDIFF SINTER AND SUNION:
@@ -117,7 +128,7 @@
 		- SMEMBERS:
 		- SMOVE:
 		- SREM:
-	+ Examples:
+	-> Examples:
 	** Adding to sets **
 	> sadd post:1:likes "bob" "joe" "mary"
 	> scard post:1:likes
@@ -130,7 +141,7 @@
 	```
    - Hashes: hashes are maps between string fields and string values
 	```
-	+ Commands: 
+	-> Commands: 
 		- HSET: 
 		- HMSET: 
 		- HGET: 
@@ -141,7 +152,7 @@
 		- HINCRBY:
 		- HKEYS:
 		- HVALS:
-	+ Examples:
+	-> Examples:
 		> hset user:1:h name "joe"
 		> hget user:1:h name 
 		> hmset user:1:h email "joe@test1.com" id 1
@@ -152,7 +163,7 @@
 	```		
     - Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
 	```		
-	+ Commands: 
+	-> Commands: 
 		- ZADD:
 		- ZCARD:
 		- ZCOUNT:
@@ -162,7 +173,7 @@
 		- ZREM:
 		- ZSCORE:
 
-	+ Examples:
+	-> Examples:
 		> zadd heightscores 120 "joe" 100 "bob" 150 "mary" 90 "tom"
 		> zrange heightscores 0 4
 		> zrange heightscores 0 4 WITHSCORES 
@@ -210,37 +221,37 @@ https://redis.io/topics/pubsub
 ** Using Transactions:
 ** Commands and Examples:
 ```
--> Terminal 1:
-> multi 
+	-> Terminal 1:
+	> multi 
 
--> Terminal 2:
-> set account-a 100
-> set account-b 200
+	-> Terminal 2:
+	> set account-a 100
+	> set account-b 200
 
--> Terminal 1:
-> incrby account-a -50
-> incrby account-b 50
+	-> Terminal 1:
+	> incrby account-a -50
+	> incrby account-b 50
 
--> Terminal 2:
-> get account-a
-> incrby account-a 300
+	-> Terminal 2:
+	> get account-a
+	> incrby account-a 300
 
--> Terminal 1:
-> exec 
-	
--> Terminal 2:
-> set account-a 0
+	-> Terminal 1:
+	> exec 
 
--> Terminal 1:
-> watch account-a
-> multi
-> incrby account-a -50
-> incrby account-b +50
+	-> Terminal 2:
+	> set account-a 0
 
--> Terminal 2:
-> set account-a 25
+	-> Terminal 1:
+	> watch account-a
+	> multi
+	> incrby account-a -50
+	> incrby account-b +50
 
--> Terminal 1:
-> exec
+	-> Terminal 2:
+	> set account-a 25
+
+	-> Terminal 1:
+	> exec
 ```
 ## 3.4. Redis Client Demo with C# Console Application
