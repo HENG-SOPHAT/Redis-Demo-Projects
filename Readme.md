@@ -80,16 +80,16 @@
   - List Data Type: Store the list of strings type.
   	```
 	-> Commands: 
-		- LPUSH: 
-		- RPUSH: 
-		- LREM: 
-		- LSET: 
-		- LINDEX: 
-		- LRANGE: 
-		- LLEN: 
-		- LPOP: 
-		- RPOP:
-		- LTRIM:
+		- LPUSH: Insert values to beginning of list.
+		- RPUSH: Insert values to end of list. 
+		- LREM: Remove values from list.
+		- LSET: Set value the list element at index.
+		- LINDEX: Get value by index.
+		- LRANGE: Get the elecments of the list.
+		- LLEN: The len of list.
+		- LPOP: Remove and Return the first element of the list.
+		- RPOP: Remove and Return the last element of the list.
+		- LTRIM: trimming the elements of the list.
 		
 	-> Examples: 	
 	
@@ -104,7 +104,7 @@
 		> RPUSH COMMENTS "Comment 5"
 		> lrange 0 5
 				
-		** LTRIM: Trimming list item **
+		** LTRIM: Trimming list element **
 		> RPUSH COMMENTS "Comment 6"
 		> lrange 0 6
 		> ltrim connents 0 5
@@ -121,23 +121,24 @@
 	
    - SETS Data Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
 	```
+	
 	-> Commands: 
-	- SADD:
-	- SCARD: 
-	- SDIFF SINTER AND SUNION:
-	- SISMEMBER:
-	- SMEMBERS:
-	- SMOVE:
-	- SREM:
+		- SADD:
+		- SCARD: 
+		- SDIFF SINTER AND SUNION:
+		- SISMEMBER:
+		- SMEMBERS:
+		- SMOVE:
+		- SREM:
 	-> Examples:
-	** Adding to sets **
-	> sadd post:1:likes "bob" "joe" "mary"
-	> scard post:1:likes
-	> smembers post:1:likes
-	> sadd post:2:likes "bob" "tom"
-	> sdiff post:1:likes post:2:likes
-	> sinter post:1:likes post:2:likes
-	> smembers post:1:likes "bob"
+		** Adding to sets **
+		> sadd post:1:likes "bob" "joe" "mary"
+		> scard post:1:likes
+		> smembers post:1:likes
+		> sadd post:2:likes "bob" "tom"
+		> sdiff post:1:likes post:2:likes
+		> sinter post:1:likes post:2:likes
+		> smembers post:1:likes "bob"
 
 	```
    - Hashes: hashes are maps between string fields and string values
