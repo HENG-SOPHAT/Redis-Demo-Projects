@@ -154,7 +154,7 @@
 		- ZRANK: get index of field or item.
 		- ZREM:
 		- ZSCORE:
-			
+
 	+ Examples:
 		> zadd heightscores 120 "joe" 100 "bob" 150 "mary" 90 "tom"
 		> zrange heightscores 0 4
