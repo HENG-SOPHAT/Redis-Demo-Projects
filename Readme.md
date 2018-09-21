@@ -31,8 +31,8 @@
   - References: 
     https://redis.io/topics/data-types-intro
     https://redis.io/topics/data-types
+    
   - Strings Data Type: 
-  
   	```
 	-> Types: String, Images, Serialize Objects( XML, JSON), Others ...
 	-> Commands: SET, GET,  APPEND, INCR AND DECR, GETRANGE, MGET, MSET, STRLEN
@@ -69,37 +69,37 @@
 	> mget order:1 order:2
 	> strlen order:1
   ```
-  2. List:
-				- Store the list of strings type:
-				- Commands: LPUSH, RPUSH, LREM, LSET, LINDEX, LRANGE, LLEN, LPOP, RPOP AND LTRIM
+ - List Data Type: Store the list of strings type.
+  ```
+  - Commands: LPUSH, RPUSH, LREM, LSET, LINDEX, LRANGE, LLEN, LPOP, RPOP AND LTRIM
+  - Examples: 		
+	** LPUSH AND RPUSH **
+	> LPUSH COMMENTS "Comment 1"
+	> lrange 0 1
+	> LPUSH COMMENTS "Comment 2"
+	> lrange 0 2
+	> RPUSH COMMENTS "Comment 3"
+	> lrange 0 3
+	> RPUSH COMMENTS "Comment 4"
+	> RPUSH COMMENTS "Comment 5"
+	> lrange 0 5
 				
-				- Examples: 
-				
-				** LPUSH AND RPUSH:
-				> LPUSH COMMENTS "Comment 1"
-				> lrange 0 1
-				> LPUSH COMMENTS "Comment 2"
-				> lrange 0 2
-				> RPUSH COMMENTS "Comment 3"
-				> lrange 0 3
-				> RPUSH COMMENTS "Comment 4"
-				> RPUSH COMMENTS "Comment 5"
-				> lrange 0 5
-				
-				** LTRIM: Trimming list item
-				> RPUSH COMMENTS "Comment 6"
-				> lrange 0 6
-				> ltrim connents 0 5
-				> lrange 0 5
-				
-				** Others commands: lindex, lpop and rpop
-				> lindex connents 2
-				> lpop connents 
-				> lrange 0 5
-				> lpop connents 
-				> lrange 0 5 
-		3. SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
-		   Commands: 
+	** LTRIM: Trimming list item
+	> RPUSH COMMENTS "Comment 6"
+	> lrange 0 6
+	> ltrim connents 0 5
+	> lrange 0 5
+
+	** Others commands: lindex, lpop and rpop
+	> lindex connents 2
+	> lpop connents 
+	> lrange 0 5
+	> lpop connents 
+	> lrange 0 5 
+  ```
+ 3. SETS Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
+  ```
+Commands: 
 				- SADD:
 				- SCARD: 
 				- SDIFF SINTER AND SUNION:
@@ -135,8 +135,8 @@
 				> hmgetall user:1:h
 				> hkeys user:1:h
 				> hvals user:1:h
-				
-		5. Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
+	```		
+  - Sorted sets: the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
 			
 			Commands: 
 				- ZADD:
