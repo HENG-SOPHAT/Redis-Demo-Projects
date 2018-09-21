@@ -266,3 +266,17 @@ https://redis.io/topics/pubsub
 	> exec
 ```
 ## 3.4. Redis Client Demo with C# Console Application
+** Redis Clients: https://redis.io/clients
+** Redis clients with C#: https://github.com/ServiceStack/ServiceStack.Redis
+	-> ICacheClient: Inteface allow to caching data with redis
+	-> IRedisNativeClient: Inteface allow to call a low-level redis commands
+	-> IRedisClient: High-Level abstraction layer
+	-> IRedisTypedClient: 
+** Demo C# Console application:
+	-> VS 2017
+	-> .Net 4.5.2 or later
+	-> Redis Client: ServiceStack.Redis
+		- NutGet Install: Install-Package ServiceStack.Redis -Version 5.1.0
+		
+		
+	
