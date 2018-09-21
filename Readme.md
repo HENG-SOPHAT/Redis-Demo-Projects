@@ -118,16 +118,17 @@
 		> lrange 0 5 
 	
   	```
+	
    - SETS Data Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
-  	```
+	```
 	-> Commands: 
-		- SADD:
-		- SCARD: 
-		- SDIFF SINTER AND SUNION:
-		- SISMEMBER:
-		- SMEMBERS:
-		- SMOVE:
-		- SREM:
+	- SADD:
+	- SCARD: 
+	- SDIFF SINTER AND SUNION:
+	- SISMEMBER:
+	- SMEMBERS:
+	- SMOVE:
+	- SREM:
 	-> Examples:
 	** Adding to sets **
 	> sadd post:1:likes "bob" "joe" "mary"
@@ -137,7 +138,7 @@
 	> sdiff post:1:likes post:2:likes
 	> sinter post:1:likes post:2:likes
 	> smembers post:1:likes "bob"
-	
+
 	```
    - Hashes: hashes are maps between string fields and string values
 	```
