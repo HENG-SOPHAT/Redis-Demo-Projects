@@ -1,38 +1,29 @@
 
-# Redis Training
+# ***Redis Training***
 
-# 1. What's NoSql database?
-
+# 1. NoSql and Redis Overview
+## 1.1. What's NoSql database?
 https://en.wikipedia.org/wiki/NoSQL
 
-# 2. NoSql Types:
+## 1.2. NoSql Types:
+There are 4 types of nosql database:
+* Key/Value Store: Redis, MemcacheDB, etc.
+* Column Stored: Cassandra, HBase, etc.
+* Document Based/Stored: MongoDB, Couchbase, CouchDB etc.
+* Graph Based/Stored: OrientDB, Neo4J, etc.
 
-```
-* Key/Value Based/Store: 
-	-> Vendors: Redis, MemcacheDB, etc.
-	-> When to use:
-		- Caching
-		- Queue-ing
-		- Distributing information /  tasks
-		- Session Store
-		
-* Column Based/Stored: 
-	-> Vendors: Cassandra, HBase, etc.
-	-> When to use:
-		- Keeping unstructure information.
-		- Scaling
-* Document Based/Stored: 
-	-> Vendors: MongoDB, Couchbase, CouchDB etc.
-	-> When to use:
-		- Nested information
-		- JavaScript friendly
-* Graph Based/Stored: 
-	-> Vendors: OrientDB, Neo4J, etc.
-	-> When to use:?
+## 1.3. Redis 
 
-```
+-> What's redis?
 
-# 3. Redis NoSql
+https://redis.io/topics/introduction
+
+-> When to use:
+	- Caching
+	- Message Broker
+	- Session Store
+	- Queue	
+
 ## 3.1. Redis Basic Commands
 * Redis Full Documentatin: https://redis.io/documentation
 * Redis Command References: https://redis.io/commands
@@ -283,6 +274,3 @@ https://redis.io/topics/pubsub
 - .Net 4.5.2 or later
 - Redis Client: ServiceStack.Redis
 - NutGet Install: Install-Package ServiceStack.Redis -Version 5.1.0
-		
-		
-	
