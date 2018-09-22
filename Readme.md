@@ -1,18 +1,18 @@
 
 # ***Redis Training***
 
-# 1. NoSql and Redis Overview
-## 1.1. What's NoSql database?
+## 1. NoSql and Redis Overview
+### 1.1. What's NoSql database?
 https://en.wikipedia.org/wiki/NoSQL
 
-## 1.2. NoSql Types:
+### 1.2. NoSql Types:
 There are 4 types of nosql database:
 * Key/Value Store: Redis, MemcacheDB, etc.
 * Column Stored: Cassandra, HBase, etc.
 * Document Based/Stored: MongoDB, Couchbase, CouchDB etc.
 * Graph Based/Stored: OrientDB, Neo4J, etc.
 
-## 1.3. Redis 
+### 1.3. Redis 
 
 -> What's redis?
 
@@ -144,7 +144,7 @@ https://redis.io/topics/introduction
 	> smembers post:1:likes "bob"
 
 ```
-### 2.3. Hashes: 
+### 2.4. Hashes: 
 * hashes are maps between string fields and string values
 ```
 -> Commands: 
@@ -167,7 +167,7 @@ https://redis.io/topics/introduction
 	> hkeys user:1:h
 	> hvals user:1:h
 ```
-### 2.4. Sorted sets: 
+### 2.5. Sorted sets: 
 * the same to sets but it's sorted. Sorted sets have excellent performance charateristics for adding, removing and updating
 ```		
 -> Commands: 
