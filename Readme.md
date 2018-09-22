@@ -192,12 +192,12 @@ https://redis.io/topics/introduction
 
 ## 3. Redis Pub and Sub: 
 
-** Redis can be used as a message bus.
+* Redis can be used as a message bus.
 
-** References: 
+* References: 
 https://redis.io/topics/pubsub
 
-** Commands and Examples:
+* Commands and Examples:
 ```
 ** Using Pub and Sub **
 - Terminal 1:
@@ -224,13 +224,13 @@ https://redis.io/topics/pubsub
 
 ## 4. Redis Transactions:
 
-** Redis has limited support for transactions.
+* Redis has limited support for transactions.
 
-** References: https://redis.io/topics/transactions
+* References: https://redis.io/topics/transactions
 
-** Using Transactions:
+* Using Transactions:
 
-** Commands and Examples:
+* Commands and Examples:
 ```
 	-> Terminal 1:
 	> multi 
@@ -267,7 +267,7 @@ https://redis.io/topics/pubsub
 ```
 ## 5. Redis Client Demo with C# Console Application
 
-** Redis Clients: https://redis.io/clients
+* Redis Clients: https://redis.io/clients
 
 ** Redis clients with C#: https://github.com/ServiceStack/ServiceStack.Redis
 - ICacheClient: Inteface allow to caching data with redis
