@@ -190,7 +190,7 @@ https://redis.io/topics/introduction
 	> zscore mary
 ``` 
 
-## 3 Redis Pub and Sub: 
+## 3. Redis Pub and Sub: 
 
 ** Redis can be used as a message bus.
 
