@@ -20,7 +20,7 @@ https://redis.io/topics/introduction
 
 * When to use:
 	- Caching
-	- Message Broker
+	- Message Broker or Realtime Message or Chating
 	- Session Store
 	- Queue	
 
@@ -29,7 +29,9 @@ https://redis.io/topics/introduction
 * Redis Command References: https://redis.io/commands
 * Redis 5 Data Types:
   - References: 
+    
     https://redis.io/topics/data-types-intro
+    
     https://redis.io/topics/data-types
     
 ### 2.1. Strings Data Type: 
