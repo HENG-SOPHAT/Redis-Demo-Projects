@@ -32,7 +32,7 @@ https://redis.io/topics/introduction
     https://redis.io/topics/data-types-intro
     https://redis.io/topics/data-types
     
-  - Strings Data Type: String, Images, Serialize Objects( XML, JSON), Others ...
+  - Strings Data Type: The most basic data type for redis values. With this data type can be store as String, Images, Serialize Objects( XML, JSON), Others ...
   	```
 	-> Commands: 
 		- SET: Set value with a key.
@@ -77,7 +77,7 @@ https://redis.io/topics/introduction
 		> strlen order:1
   	
 	```
-  - List Data Type: Store the list of strings type.
+  - List Data Type: Store the collection of strings data type.
   	```
 	-> Commands: 
 		- LPUSH: Insert values to beginning of list.
@@ -119,7 +119,8 @@ https://redis.io/topics/introduction
 	
   	```
 	
-   - SETS Data Type: Sets contain a collection of unique strings, not repeat or duplicate value. 
+   - SETS Data Type: Sets contain a collection of unique strings, not repeat or duplicate value.
+   
 	```
 	
 	-> Commands: 
