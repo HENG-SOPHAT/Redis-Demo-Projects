@@ -1,0 +1,16 @@
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\RedisDemo1.exe.config
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\RedisDemo1.exe
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\RedisDemo1.pdb
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Common.dll
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Redis.dll
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Text.dll
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Common.xml
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Redis.xml
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\bin\Debug\ServiceStack.Text.xml
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\obj\Debug\RedisDemo1.csprojAssemblyReference.cache
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\obj\Debug\RedisDemo1.csproj.CoreCompileInputs.cache
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\obj\Debug\RedisDemo1.csproj.CopyComplete
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\obj\Debug\RedisDemo1.exe
+C:\Users\sophat.heng.ASIACELL\Documents\Redis-Demo-Projects\RedisDemo1\obj\Debug\RedisDemo1.pdb

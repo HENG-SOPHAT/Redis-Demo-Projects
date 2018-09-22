@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDemo", "RedisDemo\RedisDemo.csproj", "{613642A9-1196-4AB7-A1D1-61A0B1B4758A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDemo1", "RedisDemo1\RedisDemo1.csproj", "{FC431FC7-601C-4B06-993A-D9941F08F4CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{613642A9-1196-4AB7-A1D1-61A0B1B4758A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{613642A9-1196-4AB7-A1D1-61A0B1B4758A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{613642A9-1196-4AB7-A1D1-61A0B1B4758A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC431FC7-601C-4B06-993A-D9941F08F4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC431FC7-601C-4B06-993A-D9941F08F4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC431FC7-601C-4B06-993A-D9941F08F4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC431FC7-601C-4B06-993A-D9941F08F4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@ namespace RedisDemo
         static void Main(string[] args)
         {
             // Low-level abstraction interface
-             RedisNativeClientInterface();
+            //RedisNativeClientInterface();
 
             // High-Level abstraction interface
             // RedisClientInterface();
@@ -40,7 +40,7 @@ namespace RedisDemo
             //}
 
             // Sample save user login's session to redis
-            //SampleLogin();
+            SampleLogin();
 
             Console.ReadLine();
 
@@ -68,7 +68,7 @@ namespace RedisDemo
             password = Console.ReadLine();
 
             // Check user exist..
-            var user = users.Where(u => u.UserName == userName && u.Password == "123").FirstOrDefault();
+            var user = users.Where(u => u.UserName == userName && u.Password == password).FirstOrDefault();
             if (user != null)
             {
                
@@ -142,6 +142,7 @@ namespace RedisDemo
             {
                 var result = Encoding.UTF8.GetString(client.Get("urn:messages:1"));
                 Console.WriteLine("Message: {0}", result);
+
                 var delkeys = client.Del("urn:messages:1");
                 Console.WriteLine("Key {0} deleted.", delkeys);
             }
