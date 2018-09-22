@@ -14,11 +14,11 @@ There are 4 types of nosql database:
 
 ### 1.3. Redis 
 
--> What's redis?
+* What's redis?
 
 https://redis.io/topics/introduction
 
--> When to use:
+* When to use:
 	- Caching
 	- Message Broker
 	- Session Store
