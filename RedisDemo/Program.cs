@@ -12,9 +12,8 @@ namespace RedisDemo
     {
         static void Main(string[] args)
         {
-
             // Low-level abstraction interface
-            // RedisNativeClientInterface();
+             RedisNativeClientInterface();
 
             // High-Level abstraction interface
             // RedisClientInterface();
@@ -40,12 +39,86 @@ namespace RedisDemo
 
             //}
 
+            // Sample save user login's session to redis
+            //SampleLogin();
+
             Console.ReadLine();
 
 
         }
+       
+        static void SampleLogin()
+        {
+            string userName = "";
+            string password = "";
+            string sessionId = "";
 
-        private static void RedisTransactions()
+            // Define static list of users 
+            List<User> users = new List<User>()
+            {
+                new User { UserId = 1, UserName = "user1", Password = "123", Email = "user1@user.com"},
+                new User { UserId = 2, UserName = "user2", Password = "123", Email = "user2@user.com"},
+                new User { UserId = 3, UserName = "user3", Password = "123", Email = "user3@user.com"},
+            };
+
+            // Read username and password from console.
+            Console.Write("Enter username: ");
+            userName = Console.ReadLine();
+            Console.Write("Enter password: ");
+            password = Console.ReadLine();
+
+            // Check user exist..
+            var user = users.Where(u => u.UserName == userName && u.Password == "123").FirstOrDefault();
+            if (user != null)
+            {
+               
+
+                //Save Session to redis db.
+                using (IRedisClient redisClient = new RedisClient())
+                {
+                    IRedisTypedClient<SessionInfo> sessionClient = redisClient.As<SessionInfo>();
+                    sessionId = Guid.NewGuid().ToString();
+
+                    var sessionInfo = new SessionInfo()
+                    {
+                        Id = sessionId,
+                        LoginBy = userName,
+                        LoginDate = DateTime.Now,
+                        SessionExpire = DateTime.Now.AddMinutes(30),
+                        User = user
+                    };
+                    sessionClient.StoreAsHash(sessionInfo);
+                    Console.WriteLine("Your user {0} have successfully login!", userName);
+                }
+                
+                // Use logoff
+                Console.WriteLine("Press enter to logoff username {0} : ", userName);
+                var line = Console.ReadLine();
+                if(String.IsNullOrEmpty(line))
+                {
+                    Logout(sessionId);
+                    Environment.Exit(0);
+                }
+            }
+            else
+            {
+                //User enter incorrect username/password, try login again...
+                Console.WriteLine("Login failed! Invalid username/password.");
+                SampleLogin();
+            }
+        }
+
+        static void Logout(string sessionId)
+        {
+
+            using (IRedisClient redisClient = new RedisClient())
+            {
+                IRedisTypedClient<SessionInfo> sessionClient = redisClient.As<SessionInfo>();
+                sessionClient.DeleteById(sessionId);
+            }
+        }
+
+        static void RedisTransactions()
         {
             using (IRedisClient client = new RedisClient())
             {
@@ -58,7 +131,6 @@ namespace RedisDemo
             }
         }
 
-        
         static void RedisNativeClientInterface()
         {
             using (IRedisNativeClient client = new RedisClient())
@@ -74,7 +146,6 @@ namespace RedisDemo
                 Console.WriteLine("Key {0} deleted.", delkeys);
             }
         }
-
         
         static void RedisClientInterface()
         {
@@ -131,11 +202,9 @@ namespace RedisDemo
 
         }
 
-
-
-
     }
 
+    #region public model class
     public class Customer
     {
         public long Id { get; set; }
@@ -150,4 +219,25 @@ namespace RedisDemo
     {
         public string OrderNo { get; set; }
     }
+
+    public class User
+    {
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+
+    }
+
+
+    public class SessionInfo
+    {
+        public string Id { get; set; }
+        public string LoginBy { get; set; }
+        public DateTime LoginDate { get; set; }
+        public DateTime SessionExpire { get; set; }
+        public User User { get; set; }
+
+    }
+    #endregion public model class
 }
